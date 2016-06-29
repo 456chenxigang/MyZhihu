@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item android:id="@+id/search_icon"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="消息"
+        app:showAsAction="ifRoom">
+
+    </item>
+
+    <item android:id="@+id/settings_action"
+        android:title="设置"
+        app:showAsAction="never"
+        >
+
+    </item>
+
+    <item android:id="@+id/about_action"
+        android:title="关于"
+
+        app:showAsAction="never">
+
+    </item>
+
+
+</menu>
