@@ -8,7 +8,7 @@
         <item name="colorPrimaryDark">@android:color/transparent</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorPrimary">@color/colorText</item>
-
+        <item name="android:windowBackground">@color/colorWindowBackground</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
 

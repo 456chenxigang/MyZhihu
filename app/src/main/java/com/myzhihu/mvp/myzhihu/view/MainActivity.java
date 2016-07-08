@@ -1,5 +1,6 @@
 package com.myzhihu.mvp.myzhihu.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
@@ -14,7 +15,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
 
 import com.myzhihu.mvp.myzhihu.R;
 import com.myzhihu.mvp.myzhihu.presenter.adapter.MainTabPagerAdapter;
@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Bind(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.frame_content)
-    LinearLayout frameContent;
     @Bind(R.id.main_content)
     CoordinatorLayout mainContent;
     @Bind(R.id.navigation_view)
@@ -58,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setTitle("首页");
         toolbar.setOnMenuItemClickListener(onMenuItemClickListener);
         setNavigationViewItemClickListener();
+        navigationView.setItemIconTintList(null);
 
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
         drawerToggle.syncState();
@@ -93,10 +91,36 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
-
+                Intent intent = new Intent(getApplication(),TopicActivity.class);
                 switch (item.getItemId()) {
                     case R.id.navigation_item_home:
                         showSnackBar("首页");
+                        break;
+                    case R.id.navigation_item_0:
+                        intent.putExtra("id",7+"");
+                        intent.putExtra("topic","音乐日报");
+                        startActivity(intent);
+                        break;
+                    case R.id.navigation_item_1:
+                        intent.putExtra("id",6+"");
+                        intent.putExtra("topic","财经日报");
+                        startActivity(intent);
+                        break;
+                    case R.id.navigation_item_2:
+                        intent.putExtra("id",10+"");
+                        intent.putExtra("topic","互联网安全");
+                        startActivity(intent);
+                        break;
+                    case R.id.navigation_item_3:
+                        intent.putExtra("id",5+"");
+                        intent.putExtra("topic","大公司日报");
+                        startActivity(intent);
+                        break;
+                    case R.id.navigation_item_welfare:
+                        startActivity(new Intent(getApplication(),WelfareActivity.class));
+                        break;
+                    case R.id.navigation_item_about:
+                        startActivity(new Intent(getApplication(),AboutActivity.class));
                         break;
                 }
                 drawerLayout.closeDrawers();
@@ -121,13 +145,13 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId())
             {
                 case R.id.about_action:
-                    showSnackBar("关于");
+                    startActivity(new Intent(getApplication(),AboutActivity.class));
                     break;
                 case R.id.settings_action:
-                    showSnackBar("设置");
+                     startActivity(new Intent(getApplication(),SettingActivity.class));
                     break;
                 case R.id.search_icon:
-                    showSnackBar("查找");
+                    showSnackBar("无需查找");
                     break;
             }
             return false;

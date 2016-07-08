@@ -16,8 +16,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:text="Hello World!"
+        android:text="my zhihu"
         android:layout_marginBottom="15dp"
+        android:textColor="@android:color/white"
         android:layout_centerHorizontal="true"/>
     <ImageView
         android:layout_width="wrap_content"

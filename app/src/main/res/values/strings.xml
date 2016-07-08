@@ -6,4 +6,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_msg">       此应用是基于material design的支持库实现的，运用了MVP架构实现，网络请求部分使用了当前流行的retrofir + RXjava + okhttp,用jackson解析数据，运用glide，PhotoView,实现图片的加载与处理。其中的api来源于知乎和豆瓣(首页的查找功能由于时间原因还未完成)，开发测试机为HTC，Android版本6.0。
+    \n\n 作者:cxg
+    \n\n 简书主页 http://www.jianshu.com/users/5e718c3ca9c4/latest_articles
+    \n\n GitHub主页 https://github.com/456chenxigang
+    \n\n 稀土掘金用户名:浅吟且行的时光(之后的新文章会第一时间分享到稀土掘金)</string>
 </resources>

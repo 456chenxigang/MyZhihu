@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_margin="8dp"
+        card_view:cardCornerRadius="2dp"
+        android:foreground="?attr/selectableItemBackground"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img_feed_pic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/place"
+                android:scaleType="centerCrop"
+                android:layout_margin="6dp"
+                />
+            <TextView
+                android:id="@+id/tv_feed_desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="6dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/img_feed_pic"/>
+            <ImageView
+                android:id="@+id/img_feed_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_pic"
+                android:layout_alignBottom="@+id/img_feed_pic"
+                android:layout_alignRight="@+id/tv_feed_desc"
+                android:layout_alignEnd="@+id/tv_feed_desc" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_open_in_new_black_24dp"
+                android:layout_alignBottom="@+id/img_feed_pic"
+                android:layout_toEndOf="@+id/img_feed_pic"
+                android:id="@+id/imageView"
+                android:layout_alignTop="@+id/textView"
+                android:layout_alignLeft="@+id/tv_feed_desc"
+                android:layout_alignStart="@+id/tv_feed_desc" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:text="最新"
+                android:textSize="13sp"
+                android:id="@+id/textView"
+                android:layout_alignBottom="@+id/img_feed_flag"
+                android:layout_toRightOf="@+id/imageView"
+                android:layout_toEndOf="@+id/imageView" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
