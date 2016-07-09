@@ -63,10 +63,7 @@ public class SplashActivity extends BaseActivity implements SplashImageView {
         bottomTitle.setText(startImage.getText());
         Glide.with(this)
                 .load(startImage.getImg())
-                .dontAnimate()//直接显示图片而没有任何淡入淡出效果
-                .placeholder(R.drawable.splash)//流式占位符，用来事先显示一个图片
-                .error(R.drawable.splash)
-                .diskCacheStrategy(DiskCacheStrategy.RESULT)//缓存变换后的资源
+                .diskCacheStrategy(DiskCacheStrategy.ALL)//缓存变换后的资源
                 .into(splashBackground);
         onNextStep();
     }
@@ -79,12 +76,9 @@ public class SplashActivity extends BaseActivity implements SplashImageView {
     @Override
     public void onErrorShowStartImage() {
         Log.e("onErrorShowStartImage", "---------------");
-        bottomTitle.setText("my zhihu");
-        Glide.with(this)
-                .load(R.drawable.splash)
-                .placeholder(R.drawable.splash)
-                .error(R.drawable.splash)
-                .into(splashBackground);
-        onNextStep();
+        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+        finish();
+        overridePendingTransition(0,0);
+        return;
     }
 }

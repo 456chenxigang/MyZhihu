@@ -1,5 +1,7 @@
 package com.myzhihu.mvp.myzhihu.view;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -16,7 +18,7 @@ import android.widget.TextView;
 
 import com.myzhihu.mvp.myzhihu.R;
 
-public class AboutActivity extends BaseActivity {
+public class AboutActivity extends BaseActivity implements View.OnClickListener{
 
     private static String TAG = "AboutActivity";
     // 控制ToolBar的变量
@@ -45,6 +47,8 @@ public class AboutActivity extends BaseActivity {
 
     private Toolbar mToolbar; // 工具栏
 
+    private TextView tv_comment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +62,7 @@ public class AboutActivity extends BaseActivity {
         mTvMsg = (TextView) findViewById(R.id.tv_msg);
         mTvToolbarTitle = (TextView) findViewById(R.id.tv_toolbar_title);
         mCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);
+        tv_comment = (TextView) findViewById(R.id.tv_comment);
 
         mToolbar.setTitle("");
         setSupportActionBar(mToolbar);
@@ -68,6 +73,7 @@ public class AboutActivity extends BaseActivity {
             }
         });
 
+        tv_comment.setOnClickListener(this);
         mTvMsg.setAutoLinkMask(Linkify.ALL);
         mTvMsg.setMovementMethod(LinkMovementMethod
                 .getInstance());
@@ -151,5 +157,15 @@ public class AboutActivity extends BaseActivity {
         alphaAnimation.setDuration(duration);
         alphaAnimation.setFillAfter(true);
         v.startAnimation(alphaAnimation);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.tv_comment){
+            Uri uri = Uri.parse("market://details?id="+getPackageName());
+            Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
     }
 }

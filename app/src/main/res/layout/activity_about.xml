@@ -77,18 +77,31 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 app:cardElevation="8dp"
                 app:contentPadding="16dp">
 
-                <TextView
-                    android:id="@+id/tv_msg"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:lineSpacingExtra="8dp"
-                    android:text="@string/about_msg" />
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="8dp"
+                        android:text="@string/about_msg" />
+                    <TextView
+                        android:id="@+id/tv_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="8dp"
+                        android:textColor="@color/colorAccent"
+                        android:text="\n\n去应用市场反馈"
+                        />
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 

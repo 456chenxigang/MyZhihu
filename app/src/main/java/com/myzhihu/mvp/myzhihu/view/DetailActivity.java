@@ -24,6 +24,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.myzhihu.mvp.myzhihu.R;
+import com.myzhihu.mvp.myzhihu.common.util.SystemShareUtils;
 import com.myzhihu.mvp.myzhihu.common.util.WebUtils;
 import com.myzhihu.mvp.myzhihu.model.entity.StoryDetail;
 import com.myzhihu.mvp.myzhihu.model.entity.StoryExtraInfo;
@@ -33,7 +34,7 @@ import com.myzhihu.mvp.myzhihu.presenter.infr.StoryDetailView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class DetailActivity extends BaseActivity implements StoryDetailView {
+public class DetailActivity extends BaseActivity implements StoryDetailView,View.OnClickListener {
 
     @Bind(R.id.img_detail)
     ImageView imgDetail;
@@ -59,6 +60,8 @@ public class DetailActivity extends BaseActivity implements StoryDetailView {
     FloatingActionButton floatingActionButton;
 
     private String newsId;
+    private String shareText;
+    private String shareUrl;
     private StoryDetailImpl storyDetailImpl;
 
 
@@ -69,15 +72,13 @@ public class DetailActivity extends BaseActivity implements StoryDetailView {
         ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
-        toolbar.setOnMenuItemClickListener(onMenuItemClickListener);
         toolbar.setNavigationOnClickListener(new NavigationView.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-
-
+        floatingActionButton.setOnClickListener(this);
         newsId = getIntent().getStringExtra("id");
 
         initWebview();
@@ -129,10 +130,10 @@ public class DetailActivity extends BaseActivity implements StoryDetailView {
         return true;
     }
 
-    private Toolbar.OnMenuItemClickListener onMenuItemClickListener = new Toolbar.OnMenuItemClickListener() {
-        @Override
-        public boolean onMenuItemClick(MenuItem item) {
-            switch (item.getItemId()) {
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
                 case R.id.about_action:
                     startActivity(new Intent(getApplication(),AboutActivity.class));
                     break;
@@ -141,11 +142,12 @@ public class DetailActivity extends BaseActivity implements StoryDetailView {
                     break;
                 case R.id.search_icon:
                     showSnackBar("无需查找");
+                    //SystemShareUtils.shareText(this,"【"+shareText+"】链接:"+shareUrl);
                     break;
-            }
-            return false;
-        }
-    };
+               }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     private void showSnackBar(String str) {
         Snackbar.make(coordinatorLayout, str, Snackbar.LENGTH_LONG).show();
@@ -153,7 +155,9 @@ public class DetailActivity extends BaseActivity implements StoryDetailView {
 
     @Override
     public void showStoryDetail(StoryDetail detail) {
-        tvDetailTitle.setText(detail.getTitle());
+        shareText = detail.getTitle();
+        shareUrl = detail.getShareUrl();
+        tvDetailTitle.setText(shareText);
         tvSourceDetail.setText(detail.getImageSource());
         Glide.with(this)
                 .load(detail.getImage())
@@ -189,5 +193,12 @@ public class DetailActivity extends BaseActivity implements StoryDetailView {
     @Override
     public void showStoryExtraInfo(StoryExtraInfo extraInfo) {
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.floatingActionButton){
+            SystemShareUtils.shareText(this,"【"+shareText+"】链接:"+shareUrl);
+        }
     }
 }

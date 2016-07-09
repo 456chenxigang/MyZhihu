@@ -19,7 +19,7 @@ import uk.co.senab.photoview.PhotoView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ImageFragment extends Fragment {
+public class ImageFragment extends Fragment implements View.OnLongClickListener{
 
 
     @Bind(R.id.photoView)
@@ -54,6 +54,7 @@ public class ImageFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_image, container, false);
         ButterKnife.bind(this, view);
+        photoView.setOnLongClickListener(this);
         Glide.with(getContext())
                 .load(imageUrl)
                 .into(photoView);
@@ -74,5 +75,14 @@ public class ImageFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
+    }
+
+    @Override
+    public boolean onLongClick(View v) {
+        if (v.getId() == R.id.photoView){
+            //SystemShareUtils.shareImage(this,new Uri(imageUrl));
+            //getActivity().finish();
+        }
+        return false;
     }
 }
