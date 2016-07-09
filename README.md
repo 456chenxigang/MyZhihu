@@ -1,11 +1,11 @@
 # 我的知乎，既有知识，又有美图
 
 ## 目录
-1.[简介](#简介)
-2.[截图](#截图)
-3.[知识](#可以学到)
-4.[依赖](#使用到的库)
-5.[支持](#支持我)
+1. [简介](#简介)
+1. [截图](#截图)
+1. [知识](#可以学到)
+1. [依赖](#使用到的库)
+1. [支持](#支持我)
 
 ## 简介
 这是一个知乎客户端，使用了知乎的http接口
@@ -30,20 +30,20 @@
 - 更多惊喜等待你发现（手动斜眼）
 
 ## 使用到的库
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support:design:23.4.0'
-    compile 'com.android.support:support-v4:23.4.0'
-    compile 'com.android.support:cardview-v7:23.4.0'
-    compile 'com.jakewharton:butterknife:7.0.1'
-    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
-    compile 'io.reactivex:rxjava:1.1.0'
-    compile 'io.reactivex:rxandroid:1.1.0'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.squareup.retrofit2:converter-jackson:2.0.0-beta4'
-    compile 'com.commit451:PhotoView:1.2.4'
-    compile 'de.hdodenhof:circleimageview:2.1.0'
-}
+`dependencies {
+     compile fileTree(dir: 'libs', include: ['*.jar'])
+     testCompile 'junit:junit:4.12'
+     compile 'com.android.support:appcompat-v7:23.4.0'
+     compile 'com.android.support:design:23.4.0'
+     compile 'com.android.support:support-v4:23.4.0'
+     compile 'com.android.support:cardview-v7:23.4.0'
+     compile 'com.jakewharton:butterknife:7.0.1'
+     compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+     compile 'io.reactivex:rxjava:1.1.0'
+     compile 'io.reactivex:rxandroid:1.1.0'
+     compile 'com.github.bumptech.glide:glide:3.7.0'
+     compile 'com.squareup.retrofit2:converter-jackson:2.0.0-beta4'
+     compile 'com.commit451:PhotoView:1.2.4'
+     compile 'de.hdodenhof:circleimageview:2.1.0'
+ }`
