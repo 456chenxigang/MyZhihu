@@ -8,9 +8,9 @@
 1. [支持](#支持我)
 
 ## 简介
-这是一个仿知乎的客户端，使用了知乎和干货集中营的api
+这是一个仿知乎的客户端，使用了知乎和干货集中营的api,
 使用了 [material design](http://wiki.jikexueyuan.com/project/material-design/) 设计语言
-运用了 [MVP](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0202/2397.html) 架构实现，网络请求部分使用了当前流行的retrofir + RXjava + okhttp,使用GSON解析数据，glide获取图片，butterknife自动生成view注解等
+运用了 [MVP](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0202/2397.html) 模式实现，网络请求部分使用了当前流行的retrofir + RXjava + okhttp,使用GSON解析数据，glide获取图片，butterknife自动生成view注解等，
 项目做了较多的注释，非常适合初学者学习运用
 
 ## 截图
@@ -23,14 +23,14 @@
 
 ## 可以学到
 - Android Design库的使用
-- 自定义你的基类Activity
+- 自定义你的基类Activity，Fragment
 - 应用MVP模式到项目中
 - 使用retrofit2 + Rxjava + OKhttp配合请求网络
 - 用Gson解析网络数据
 - 用Glide加载图片
 - 用PhotoView缩放图片
 - 用RecyclerView实现瀑布流及多种布局的实践
-- 使用协调布局实现Tab,FAB,Toolbar动态隐藏与现实
+- 使用协调布局实现Tab,FAB,Toolbar动态隐藏与上下滑动
 - 使用最简单的方法实现社会化分享功能
 - 更多惊喜等待你发现（手动斜眼）
 
