@@ -32,18 +32,22 @@
 
 ## 使用到的库
 ````
-   compile 'com.android.support:appcompat-v7:23.4.0'
-   compile 'com.android.support:design:23.4.0'
-   compile 'com.android.support:support-v4:23.4.0'
-   compile 'com.android.support:cardview-v7:23.4.0'
-   compile 'com.jakewharton:butterknife:7.0.1'
-   compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
-   compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
-   compile 'io.reactivex:rxjava:1.1.0'
-   compile 'io.reactivex:rxandroid:1.1.0'
-   compile 'com.github.bumptech.glide:glide:3.7.0'
-   compile 'com.squareup.retrofit2:converter-jackson:2.0.0-beta4'
-   compile 'com.commit451:PhotoView:1.2.4'
-   compile 'de.hdodenhof:circleimageview:2.1.0'
+   dependencies {
+       compile fileTree(dir: 'libs', include: ['*.jar'])
+       testCompile 'junit:junit:4.12'
+       compile 'com.android.support:appcompat-v7:23.4.0'
+       compile 'com.android.support:design:23.4.0'
+       compile 'com.android.support:support-v4:23.4.0'
+       compile 'com.android.support:cardview-v7:23.4.0'
+       compile 'com.jakewharton:butterknife:7.0.1'
+       compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+       compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+       compile 'io.reactivex:rxjava:1.1.0'
+       compile 'io.reactivex:rxandroid:1.1.0'
+       compile 'com.github.bumptech.glide:glide:3.7.0'
+       compile 'com.squareup.retrofit2:converter-jackson:2.0.0-beta4'
+       compile 'com.commit451:PhotoView:1.2.4'
+       compile 'de.hdodenhof:circleimageview:2.1.0'
+   }
  
   ``` 
