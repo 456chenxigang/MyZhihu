@@ -14,18 +14,16 @@
 项目做了较多的注释，非常适合初学者学习运用
 
 ## 截图
-
-<a href="./screenshots/device-2016-07-09-141603.png"><img src="./screenshots/device-2016-07-09-141603.png" width="40%"/></a><a href="./screenshots/screenshots/device-2016-07-09-141642.png"><img src="./screenshots/screenshots/device-2016-07-09-141642.png" width="40%"/></a>
+````
+<a href="./screenshots/device-2016-07-09-141603.png"><img src="./screenshots/device-2016-07-09-141603.png" width="40%"/></a><a href="./screenshots/device-2016-07-09-141642.png"><img src="./screenshots/device-2016-07-09-141642.png" width="40%"/></a>
 <a href="./screenshots/device-2016-07-09-141743.png"><img src="./screenshots/device-2016-07-09-141743.png" width="40%"/></a><a href="./screenshots/device-2016-07-09-141816.png"><img src="./screenshots/device-2016-07-09-141816.png" width="40%"/></a>
+<a href="./screenshots/device-2016-07-09-141854.png"><img src="./screenshots/device-2016-07-09-141854.png" width="40%"/></a><a href="./screenshots/device-2016-07-09-141958.png"><img src="./screenshots/device-2016-07-09-141958.png" width="40%"/></a>
+
 <!--![ScreenShots](screenshots/device-2016-07-09-141603.png)
 ![ScreenShots](screenshots/device-2016-07-09-141642.png)
 ![ScreenShots](screenshots/device-2016-07-09-141743.png)
 ![ScreenShots](screenshots/device-2016-07-09-141816.png)-->
-
-
-device-2016-07-09-141854.png	screenshot	2 days ago
-device-2016-07-09-141958.png
-
+```
 ## 可以学到
 - Android Design库的使用
 - 自定义你的基类Activity
