@@ -31,10 +31,8 @@
 - 更多惊喜等待你发现（手动斜眼）
 
 ## 使用到的库
-`dependencies {
-     compile fileTree(dir: 'libs', include: ['*.jar'])
-     testCompile 'junit:junit:4.12'
-     compile 'com.android.support:appcompat-v7:23.4.0'
+
+   |  compile 'com.android.support:appcompat-v7:23.4.0'
      compile 'com.android.support:design:23.4.0'
      compile 'com.android.support:support-v4:23.4.0'
      compile 'com.android.support:cardview-v7:23.4.0'
@@ -47,4 +45,3 @@
      compile 'com.squareup.retrofit2:converter-jackson:2.0.0-beta4'
      compile 'com.commit451:PhotoView:1.2.4'
      compile 'de.hdodenhof:circleimageview:2.1.0'
- }`
