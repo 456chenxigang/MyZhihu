@@ -8,14 +8,23 @@
 1. [支持](#支持我)
 
 ## 简介
-这是一个知乎客户端，使用了知乎的http接口
-使用了material design设计语言
-运用了MVP架构实现，网络请求部分使用了当前流行的retrofir + RXjava + okhttp,使用GSON解析数据，glide获取图片，butterknife自动生成view注解等
+这是一个仿知乎的客户端，使用了知乎和干货集中营的api
+使用了 [material design](http://wiki.jikexueyuan.com/project/material-design/) 设计语言
+运用了 [MVP](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0202/2397.html) 架构实现，网络请求部分使用了当前流行的retrofir + RXjava + okhttp,使用GSON解析数据，glide获取图片，butterknife自动生成view注解等
 项目做了较多的注释，非常适合初学者学习运用
 
 ## 截图
-![image](https://github.com/456chenxigang/MyZhihu/blob/master/screenshot/device-2016-07-09-141603.png)
-![image](https://github.com/456chenxigang/MyZhihu/blob/master/screenshot/device-2016-07-09-141642.png)
+
+<a href="./screenshots/device-2016-07-09-141603.png"><img src="./screenshots/device-2016-07-09-141603.png" width="40%"/></a><a href="./screenshots/screenshots/device-2016-07-09-141642.png"><img src="./screenshots/screenshots/device-2016-07-09-141642.png" width="40%"/></a>
+<a href="./screenshots/device-2016-07-09-141743.png"><img src="./screenshots/device-2016-07-09-141743.png" width="40%"/></a><a href="./screenshots/device-2016-07-09-141816.png"><img src="./screenshots/device-2016-07-09-141816.png" width="40%"/></a>
+<!--![ScreenShots](screenshots/device-2016-07-09-141603.png)
+![ScreenShots](screenshots/device-2016-07-09-141642.png)
+![ScreenShots](screenshots/device-2016-07-09-141743.png)
+![ScreenShots](screenshots/device-2016-07-09-141816.png)-->
+
+
+device-2016-07-09-141854.png	screenshot	2 days ago
+device-2016-07-09-141958.png
 
 ## 可以学到
 - Android Design库的使用
