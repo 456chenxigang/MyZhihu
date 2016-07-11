@@ -31,7 +31,7 @@
 - 更多惊喜等待你发现（手动斜眼）
 
 ## 使用到的库
-
+````
    compile 'com.android.support:appcompat-v7:23.4.0'
    compile 'com.android.support:design:23.4.0'
    compile 'com.android.support:support-v4:23.4.0'
@@ -46,4 +46,4 @@
    compile 'com.commit451:PhotoView:1.2.4'
    compile 'de.hdodenhof:circleimageview:2.1.0'
  
-   
+  ``` 
