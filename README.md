@@ -14,7 +14,7 @@
 项目做了较多的注释，非常适合初学者学习运用
 
 ## 截图
-![image](https://github.com/456chenxigang/MyZhihu/blob/master/screenshot/device-2016-07-09-141603.png)
+![image](https://github.com/456chenxigang/MyZhihu/blob/master/screenshot/device-2016-07-09-141603.png =480x800)
 ![image](https://github.com/456chenxigang/MyZhihu/blob/master/screenshot/device-2016-07-09-141642.png)
 
 ## 可以学到
