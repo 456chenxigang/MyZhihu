@@ -26,7 +26,7 @@
 - 自定义你的基类Activity，Fragment
 - 应用MVP模式到项目中
 - 使用retrofit2 + Rxjava + OKhttp配合请求网络
-- 用Gson解析网络数据
+- 用jackson解析网络数据
 - 用Glide加载图片
 - 用PhotoView缩放图片
 - 用RecyclerView实现瀑布流及多种布局的实践
