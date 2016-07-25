@@ -10,7 +10,7 @@
     <application
         android:name=".common.BaseApplication"
         android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher0"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
@@ -28,7 +28,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".view.MainActivity" />
         <activity android:name=".view.DetailActivity" />
-        <activity android:name=".view.LargeImageActivity$TopicActivity" />
         <activity android:name=".view.WelfareActivity" />
         <activity android:name=".view.LargeImageActivity" />
         <activity android:name=".view.TopicActivity" />

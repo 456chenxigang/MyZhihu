@@ -21,7 +21,6 @@ import butterknife.ButterKnife;
 
 public class SplashActivity extends BaseActivity implements SplashImageView {
 
-
     @Bind(R.id.splashBackground)
     ImageView splashBackground;
     @Bind(R.id.bottomTitle)
@@ -33,8 +32,8 @@ public class SplashActivity extends BaseActivity implements SplashImageView {
     private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            super.handleMessage(msg);
             if (msg.what == GO_MAIN) {
+                super.handleMessage(msg);
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 finish();
                 overridePendingTransition(0,0);

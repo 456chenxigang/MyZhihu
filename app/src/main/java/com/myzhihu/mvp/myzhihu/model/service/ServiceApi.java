@@ -37,9 +37,9 @@ public interface ServiceApi {
     @GET("4/theme/{topicId}/before/{storyId}")
     Observable<TopicDetail> getPastTopic(@Path("topicId")String topicId,@Path("storyId")String storyId);
 
-    @GET("福利/10/{id}")
+    @GET("福利/20/{id}")
     Observable<WelfareImages> getNewWelfareImages(@Path("id")String id);
 
-    @GET("福利/10/{id}")
+    @GET("福利/20/{id}")
     Observable<WelfareImages> getPastWelfareImages(@Path("id")String id);
 }

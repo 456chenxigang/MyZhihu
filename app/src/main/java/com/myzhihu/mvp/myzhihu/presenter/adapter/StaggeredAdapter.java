@@ -115,7 +115,7 @@ public class StaggeredAdapter extends BaseRecyclerAdapter<RecyclerView.ViewHolde
     }
 
     public String getLatestId() {
-        return latestId+(resultsBean.size()/10+1)+"";
+        return latestId+(resultsBean.size()/20+1)+"";
     }
 
     public static class StaggeredViewHolder extends RecyclerView.ViewHolder{
